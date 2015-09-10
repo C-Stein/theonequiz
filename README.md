@@ -98,7 +98,7 @@ http-server
 
 What gets logged to the console when the following code executes? Explain why.
 
-**Student answer: **
+- 42. Because Life, the Universe, and Everything. Also, the function called is steve(). Even though there are "answers" declared in luke() and greg(), those "answers" are limited in scope to those functions and don't affect the global variable "answer". Steve() is called in the global scope, and therefore uses the global variable. (Global variable means that the variable is first declared with the "var" keyword outside of any function.)
 
 ```
 var answer = "42";
