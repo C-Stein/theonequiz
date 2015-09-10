@@ -9,4 +9,6 @@ otherFruit.slices = function(fruit, numSlices) {
   return fruitSlices;
 }
 
+return otherFruit;
+
 }(FruitMaker));
