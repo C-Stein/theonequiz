@@ -65,13 +65,34 @@ http-server
 
 1. Write a function named `getAnimals` that uses the jQuery `ajax` method to retrieve the `data/animals.json` file. When you execute the functions, it should just log *just the array* of animals to the console when the async is complete. Make sure you provide a prompt of "animals" when logging the array.
 1. What are the four HTTP verbs that you can use in an XHR that correspond to the CRUD actions (create, read, update, delete)?
-  POST GET
+  PUT GET POST DELETE
 
 1. Why did we use Promises when dealing with asynchronous XHR calls?
   Since the asynchronous nature of those calls means that the information may or may not be returned  before other code is run or the page has loaded, promises allow a function to "wait" on the asynchronous call to complete before running.
 
 1. Provide a simple example of the syntax for handling a Promise.
-  **Student answer:**
+  ```
+   function doAwesome() { 
+    var deferred = Q.defer();                      <- declare a variable = Q.defer();
+
+      $.ajax({
+      url:"./promises/awesome.json"
+      }).done(function(data){
+        deferred.resolve(data);                     <- this saves your data in a promise for later
+      })
+      .fail(function (xhr, status, error){
+        deferred.reject(error);                     <- this saves your error in a promise for later
+      });
+
+    return deferred.promise;                        <- you must return the promise so it can be used outside the function
+  }
+  ```
+  
+  ```
+  doAwesome().then(function(data) {                   <- .then() syntax recalls your data!
+    console.log("Look at this awesome data!", data);
+  }
+  ```
 
 ## Scope and this
 
