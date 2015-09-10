@@ -64,8 +64,6 @@ function getAnimals() {
 
 getAnimals();
 
-console.log(FruitMaker.getFruits());
-
 
 
 
