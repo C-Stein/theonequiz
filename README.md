@@ -27,11 +27,16 @@ http-server
 
 ## JavaScript concepts
 1. Explain what hoisting is. Provide your answer below.
+  Hoisting is a behavior in JavaScript where all variables declared within a particular scope are interpreted by the browser as having been declared at the top of that scope (file or function), regardless of where in the script they were written. To account for this behavior, it is common practice for developers to declare variables at the top of any given scope since that is where the browser will interpret them anyways.
 
-  **Student answer: **
+ 
 1. What is a callback? Why do we use them in JavaScript? Provide your answer, and code a simple example below.
+  A callback is a function called by another function. They can be used in JavaScript to keep functions as small and reusable as possible, and also to handle asynchronous requests appropriately.
+```
 
-  **Student answer: **
+
+```
+
 
 ## Functions and operators
 
@@ -60,10 +65,10 @@ http-server
 
 1. Write a function named `getAnimals` that uses the jQuery `ajax` method to retrieve the `data/animals.json` file. When you execute the functions, it should just log *just the array* of animals to the console when the async is complete. Make sure you provide a prompt of "animals" when logging the array.
 1. What are the four HTTP verbs that you can use in an XHR that correspond to the CRUD actions (create, read, update, delete)?
-  **Student answer:**
+  POST GET
 
 1. Why did we use Promises when dealing with asynchronous XHR calls?
-  **Student answer:**
+  Since the asynchronous nature of those calls means that the information may or may not be returned  before other code is run or the page has loaded, promises allow a function to "wait" on the asynchronous call to complete before running.
 
 1. Provide a simple example of the syntax for handling a Promise.
   **Student answer:**
